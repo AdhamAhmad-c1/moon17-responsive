@@ -1,30 +1,29 @@
 *{
-    margine: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-svg {
-  width: 24px;
-  height: 24px;
-  display: none;
+.menu{
+    display: none;
 }
 
 .container{
-    width: calc(100% - 330px);
+    width: calc(100% - 20%);
     margin: 0 auto;
-
+    padding: 0 20px; 
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 21.84px 0;
-    margin: 0 165px;
 }
-
-
 
 .list ul{
     display: flex;
@@ -37,12 +36,9 @@ svg {
     gap: 24px;
 }
 .collection_section{
-    display: flex;
-    flex-wrap: wrap;
     gap: 30px;
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: 0 165px;
 }
 .collection{
     text-align: center;
@@ -54,24 +50,43 @@ img{
 h2{
     margin-top: 23px;
 }
- a{
+a{
     text-decoration: none;
+}
+@media screen and (min-width:0px) and (max-width:1000px){
+  
+    .list  {
+        display: none;
+    }
+    .icons {
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    
+    
  }
- @media screen and (min-width:0) and (max-width:700px){
-    .header{
+ @media screen and (min-width:0) and (max-width:400px){
+    .collection_section .row{
         flex-direction: column;
     }
-    .collection_section{
-        flex-direction: column;
+    .collection{
         width: 100%;
     }
  }
+  @media screen and (min-width:401px) and (max-width:770px){
+    .collection{
+            width: calc( (100% - 30px) / 2 );
+
+    }
+  }
+
+   
  
- @media screen and (min-width:0) and (max-width:1000px){
-    .list ul {
-        display: none;
+ @media screen and (min-width:771px) and (max-width:1000px){
+    .collection{
+    width: calc( (100% - 60px) / 3 );
     }
-    svg{
-        display:block ;
-    }
+   
  }
