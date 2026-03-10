@@ -3,6 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primaryColor: #3A3845;
+    --primaryFont: Inter;
+
+}
+body{
+    font-family: var(--primaryFont);
+}
+
+h1,h2,h3,h4,h5,h6 {
+     font-family: "EB Garamond", serif;
+}
 
 .menu{
     display: none;
@@ -15,7 +27,6 @@
 }
 .row{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -35,6 +46,11 @@
     list-style-type: none;
     gap: 24px;
 }
+.hero{
+    
+
+}
+
 .collection_section{
     gap: 30px;
     padding-top: 40px;
@@ -44,14 +60,66 @@
     text-align: center;
     width: calc( (100% - 90px) / 4 );
 }
+.best_sellers{
+    text-align: center;
+    padding: 80px 0;
+}
+.best_sellers .row{
+    gap: 30px;
+}
+.best_sellers .item {
+    text-align: left;
+    width: calc( (  100% - 90px ) / 4 );
+}
+.best_sellers h2{
+    font-size: 30px;
+    font-style: bold;
+    font-weight: 7000;
+    letter-spacing: 3px;
+    margin-bottom: 48px;
+}
+.best_sellers .item-content{
+    margin-top: 24px;
+}
+.best_sellers h3{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.best_sellers .span{
+    font-size: 22px;
+    font-weight: 500;
+
+}
+.best_sellers .description{
+    color: #807F86;
+    width: 80%;
+    line-height: 22px;
+    margin-top: 24px;
+    margin-bottom: 34px;
+}
+.best_sellers .add_to_cart{
+    padding: 15px 81px;
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600px;
+}
+
 img{
     width: 100%;
 }
-h2{
+.collection h2{
     margin-top: 23px;
 }
 a{
     text-decoration: none;
+    color: var(--primaryColor);
+    font-family: var(--primaryFont);
+    font-size: 14px;
 }
 @media screen and (min-width:0px) and (max-width:1000px){
   
@@ -74,11 +142,23 @@ a{
     .collection{
         width: 100%;
     }
+    .best_sellers .item{
+        width: 100%;
+    }
  }
   @media screen and (min-width:401px) and (max-width:770px){
     .collection{
             width: calc( (100% - 30px) / 2 );
 
+    }
+    .best_sellers .item{
+        width: calc( ( 100% - 30px ) / 2);
+    }
+    .best_sellers h3{
+        font-size: 11px;
+    }
+    .best_sellers .add_to_cart{
+        padding: 15px 30px;
     }
   }
 
@@ -87,6 +167,15 @@ a{
  @media screen and (min-width:771px) and (max-width:1000px){
     .collection{
     width: calc( (100% - 60px) / 3 );
+    }
+    .best_sellers .item{
+        width: calc( ( 100% - 60px ) / 3);
+    }
+    .best_sellers h3{
+        font-size: 11px;
+    }
+    .best_sellers .add_to_cart{
+        padding: 15px 40px;
     }
    
  }
