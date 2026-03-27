@@ -388,7 +388,9 @@ h1,h2,h3,h4,h5,h6 {
 .new_arrivals img:hover{
     filter: grayscale(0);
 }
-
+.h{
+    height: 69px;
+}
 .a_item .span{
     font-size: 22px;
     font-weight: 500;
