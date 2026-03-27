@@ -243,11 +243,12 @@ h1,h2,h3,h4,h5,h6 {
     box-shadow: 0px 0px 10px 4px rgb(191, 191, 191);
     padding: 5px;
 }
-.best_sellers .item-content{
-    margin-top: 24px;
+.item{
+    display: flex;
+    flex-direction: column;
 }
 .best_sellers h3{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -258,16 +259,21 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+
+.item-content .description{
+    height: 20px;
+}
+
 .best_sellers .description{
     color: #807F86;
     width: 100%;
     line-height: 22px;
     margin-top: 24px;
     margin-bottom: 34px;
+    background-color: red;
+    flex: 1;
 }
-.marin{
-    height: 45px;
-}
+
 .best_sellers .add_to_cart{
     padding: 15px 81px;
     background-color: #fff;
@@ -383,9 +389,7 @@ h1,h2,h3,h4,h5,h6 {
 .new_arrivals img:hover{
     filter: grayscale(0);
 }
-.marine{
-    height: 66px;
-}
+
 .a_item .span{
     font-size: 22px;
     font-weight: 500;
